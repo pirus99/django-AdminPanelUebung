@@ -17,6 +17,8 @@ class EventAdmin(admin.ModelAdmin):
         }),
     )
 
+    date_hierarchy = 'date'
+
     def get_form(self, request, obj=None, **kwargs):
         form = super().get_form(request, obj, **kwargs)
         for fname in ('location', 'capacity'):

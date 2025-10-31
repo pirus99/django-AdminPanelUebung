@@ -12,6 +12,6 @@ class BookingAdmin(admin.ModelAdmin):
     list_display = ('event', 'participant', 'booking_date', 'confirmed')
     list_filter = ('confirmed', 'booking_date')
     search_fields = ('event__title', 'participant__first_name', 'participant__last_name')
-
+    
 admin.site.register(Participant, ParticipantAdmin)
 admin.site.register(Booking, BookingAdmin)
